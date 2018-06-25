@@ -1,16 +1,5 @@
 package gostruct
 
-import "fmt"
-
-// Node node
-type Node struct {
-	value interface{}
-}
-
-func (n *Node) String() string {
-	return fmt.Sprint(n.value)
-}
-
 // Stack stack
 type Stack struct {
 	Nodes []*Node
