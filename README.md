@@ -6,7 +6,7 @@
 
 ```Go
 func TestStack(t *testing.T) {
-	gs := &gostruct.Stack{}
+	gs := gostruct.NewStack()
 	gs.Push(1)
 	fmt.Println(gs.Pop())
 	gs.Push(time.Now())
