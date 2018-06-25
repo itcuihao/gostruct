@@ -8,9 +8,8 @@ type Stack struct {
 
 // Push push
 func (s *Stack) Push(i interface{}) {
-	n := &Node{
-		value: i,
-	}
+	n := NewNode(i)
+
 	nodes := make([]*Node, 0, s.Count+1)
 	nodes = append(s.Nodes[:s.Count], n)
 
