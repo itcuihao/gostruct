@@ -39,3 +39,8 @@ func (s *Stack) Pop() *Node {
 	s.Count--
 	return s.Nodes[s.Count]
 }
+
+// NewStack new stack
+func NewStack() *Stack {
+	return &Stack{}
+}
