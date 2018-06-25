@@ -17,3 +17,15 @@ func NewNode(v interface{}) *Node {
 		value: v,
 	}
 }
+
+// Nodes nodes
+type Nodes struct {
+	Value interface{}
+	Next  *Nodes
+}
+
+// SingleLinkedList 单链表
+type SingleLinkedList struct {
+	Front *Nodes
+	Len   int
+}
