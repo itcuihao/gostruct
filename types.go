@@ -10,3 +10,10 @@ type Node struct {
 func (n Node) String() string {
 	return fmt.Sprint(n.value)
 }
+
+// NewNode new node
+func NewNode(v interface{}) *Node {
+	return &Node{
+		value: v,
+	}
+}
