@@ -15,6 +15,7 @@ func TestStack(t *testing.T) {
 	fmt.Println(gs.Pop())
 }
 
+output:
 1
 <nil>
 2018-06-25 18:05:22.931157547 +0800 CST m=+0.000417280
@@ -37,6 +38,7 @@ func TestStack(t *testing.T) {
     fmt.Println(gs.Pop())
 }
 
+output:
 1
 2018-06-25 18:02:58.915803906 +0800 CST m=+0.000442400
 <nil>
