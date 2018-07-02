@@ -19,3 +19,21 @@ func TestQueue(t *testing.T) {
 	gq.Push(2)
 	fmt.Println(gq.Pop())
 }
+
+// go test -test.bench=".*"
+func BenchmarkQueue(b *testing.B) {
+	b.ResetTimer()
+	q := NewQueue(1)
+	for i := 0; i < b.N; i++ {
+		q.Push(i)
+		q.Pop()
+	}
+}
+func BenchmarkQueue1(b *testing.B) {
+	b.ResetTimer()
+	q := NewSimpleQueue(1)
+	for i := 0; i < b.N; i++ {
+		q.Push(i)
+		q.Pop()
+	}
+}
