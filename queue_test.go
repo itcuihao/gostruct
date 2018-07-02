@@ -7,11 +7,15 @@ import (
 )
 
 func TestQueue(t *testing.T) {
-	gq := NewQueue(1)
+	gq := NewSimpleQueue(1)
 	gq.Push(1)
+	fmt.Println("len:", gq.Len())
 	fmt.Println(gq.Pop())
+	fmt.Println(gq.IsEmpty())
 	gq.Push(time.Now())
-	gq.Push(2)
+	fmt.Println(gq.IsEmpty())
 	fmt.Println(gq.Pop())
+	fmt.Println(gq.IsEmpty())
+	gq.Push(2)
 	fmt.Println(gq.Pop())
 }
