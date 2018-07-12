@@ -30,7 +30,7 @@ ok      tests/strings   0.002s
 > go test -run TestQueue
 
 ```Go
-func TestStack(t *testing.T) {
+func TestQueue(t *testing.T) {
 	gs := gostruct.NewQueue(1)
 	gs.Push(1)
 	fmt.Println(gs.Pop())
@@ -46,4 +46,16 @@ output:
 <nil>
 PASS
 ok      tests/strings   0.002s
+```
+
+
+```Go
+func TestQueue(t *testing.T) {
+	gs := gostruct.NewSimpleQueue(1)
+	gs.Push(1)
+
+	fmt.Println(gs.Pop())
+	gs.Len()
+	gs.IsEmpty()
+}
 ```
