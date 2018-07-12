@@ -1,5 +1,7 @@
 # gostruct
 
+常见的数据结构，栈，队列，树，图等等
+
 ## Stack
 
 > go test -run TestStack
